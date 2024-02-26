@@ -209,3 +209,56 @@
     opacity: 1; 
 }
 /* Boton de guardar dentro de cada imagen*/
+
+/* Media Queries*/
+@media screen and (min-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 15px;
+    }
+    #navbar-pinterest {
+        padding: 10px 30px; 
+    }
+
+    #pinterest-icon img {
+        height: 35px; 
+    }
+
+    #home,
+    #explore,
+    #create {
+        margin-right: 20px; 
+    }
+
+    .search-container {
+        margin: 0 30px; 
+    }
+
+    #menu-items div {
+        margin-right: 20px; 
+    }
+
+    #notifications img,
+    #message img,
+    #profile-img img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+}
+
+/* Media Queries, un poquito como los limites en Excel, la neta ni le entendi, pero las fotos se hacen chiquitas con la pagina asi q supongo q funciono xd*/
