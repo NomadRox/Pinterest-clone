@@ -1,0 +1,211 @@
+
+/*Imagenes q se hacen mas grandecitas cuando pasas el ratonsito*/
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+.card-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+.card-image:hover img {
+    transform: scale(1.1);
+}
+.card-image .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.card-image:hover .buttons {
+    opacity: 1;
+}
+/*Imagenes q se hacen mas grandecitas cuando pasas el ratonsito*/
+
+/*Navbarrrr (Dolor de cabeza horrible, nomas no queda :((((( */
+#navbar-pinterest {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1 ); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    z-index: 1000;
+}
+#navbar-pinterest a {
+    text-decoration: none;
+    color: #333;
+}
+
+#pinterest-icon img {
+    height: 30px; 
+    margin-right: 10px; 
+}
+
+#creation-items {
+    display: flex;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-left: -10px; 
+}
+
+#creation-items div {
+    width: 70px; 
+    text-align: center; 
+    padding: 5px 0; 
+}
+
+#creation-items div:hover {
+    color: white; 
+    background-color: black; 
+    border-radius: 15px;
+}
+
+#home,
+#explore,
+#create {
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+
+.finder {
+    flex: 1;
+    margin: 0 20px;
+    border-radius: 50px; 
+    border-width: 0px;
+    border-color: #2dacf5;
+    background-color: #e0e0e0; 
+    font-family: Arial, sans-serif; 
+    padding: 10px 500px; 
+    height: 30px;
+    font-size: 20px;
+}
+
+.finder input {
+    padding-left: 100px;
+    text-align: left;
+}
+
+#menu-items {
+    display: flex;
+    margin-right: 20px; 
+}
+#message, #notifications, #profile-img {
+    cursor: pointer; 
+}
+
+#notifications img,
+#message img,
+#profile-img img {
+    width: 30px; 
+    height: 30px; 
+}
+
+#notifications img {
+    margin-right: 20px; 
+}
+
+#message img {
+    margin-right: 20px;
+}
+
+#profile-img img {
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
+#notifications
+#message::after,
+#profile-img::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#message:hover::after,
+#profile-img:hover::after {
+    opacity: 1;
+}
+/*Navbarrrr (Dolor de cabeza horrible, nomas no queda :((((( */
+
+/*Tamaño y posicion de imagenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 10px; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.card-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 20px; 
+}
+
+.card-image:nth-child(-n+5) {
+    margin-top: 100px;
+}
+/*Tamaño y posicion de imagenes */
+
+/* Boton de guardar dentro de cada imagen*/
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 12px 17px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0s, color 0s;
+    opacity: 0; 
+}
+
+.card-image:hover .save-button,
+.save-button.clicked {
+    opacity: 1;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px; 
+    overflow: hidden;
+}
+
+.image-container:hover .overlay-image {
+    opacity: 1; 
+}
+/* Boton de guardar dentro de cada imagen*/
